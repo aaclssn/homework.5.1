@@ -51,27 +51,35 @@ footer{
 }
 
 /*Begin your code here*/
+
 /*Keyframes for animation*/
 
 @-webkit-keyframes logo_wiggle{
-  /*Your code here.*/
-
+  from {width: 25px;}
+  to {width: 420px;}
 }
 
 @keyframes logo_wiggle{
-  /*Your code here.*/
+  from {width: 25px;}
+  to {width: 420px;}  
 
 } 
 
 #logo{
-   /*Your code here.*/
+ animation-name: logo-wiggle;
+ -webkit-animation-name: logo_wiggle;
+ animation-duration: 15s;
  
 }
 
 /* Cards! */
 .pricing{
     min-height: 500px;
-    /*Your code here.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
     /*Don't forget to vertically and horizontally alight the card*/
   
 }
@@ -82,6 +90,7 @@ footer{
   border-radius: 7px;
   padding: 0 0 50px 0;
   /*Your code here.*/
+  flex-basis: 400px;
   /*Take a look at flex-basis*/
 
 }
@@ -127,7 +136,11 @@ footer{
 
 /* Gallery! */
 .gallery{
+  display:flex;
   min-height: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   /*Your code here again.*/
 }
 
@@ -139,12 +152,17 @@ footer{
 
 /* Navbar */
 header{
+  display: flex;
   background: #fff;
   border-bottom: 3px solid #50C7C7;
+  flex-direction: column;
+  align-items: center;
   /*Your  code here again.*/
 }
 
 .nav_links{
+  display: flex;
+  flex-direction: column;
   /*Your code here again.*/
 }
 
@@ -164,6 +182,8 @@ header{
 
   /* Cards! */
   .card {
+    flex-basis: 225px;
+  
     /*Your  code here again.*/
   }
 
@@ -174,10 +194,13 @@ header{
 
   /* Navbar */
   header{
+    flex-direction: row;
+    justify-content: space-between;
     /*Your code here again.*/  
   }
 
   .nav_links{
+    flex-direction: row;
     /*Your code here again.*/  
   }
 
